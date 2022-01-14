@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#{
+    color: white;
+}
+.navbar-nav{
+   font-size: 30px;
+   margin-left: 20%;
+  text-align: center;
+  
+   
+}
+.nav-item{
+    padding: 30px;
+    
+}
