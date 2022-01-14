@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
 }
-#{
-    color: white;
-}
+
 .navbar-nav{
    font-size: 30px;
    margin-left: 20%;
@@ -32,4 +30,97 @@
     left: 0;
     right: 0;
     padding-bottom: 50px;
+}
+.price{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    
+}
+.price .small{
+    font-size: 30px;
+    padding-left: 20%;
+}
+
+
+.price p{
+   margin-left: 30%;
+   font-size: 25px;
+}.glu-small{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;   
+}
+.glu-small .small{
+    font-size: 30px;
+    padding-left: 20%;
+}   
+.glu-small p{
+    margin-left: 30%;
+    font-size: 25px;
+
+}.glu-medium{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;   
+}
+.glu-medium .small{
+    font-size: 30px;
+    padding-left: 20%;
+}   
+.glu-medium p{
+    margin-left: 30%;
+    font-size: 25px;
+
+}.glu-small{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;   
+}
+.glu-large .small{
+    font-size: 30px;
+    padding-left: 20%;
+}   
+.glu-large p{
+    margin-left: 30%;
+    font-size: 25px;
+}
+.stu-large{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;   
+}
+.glu-large .small{
+    font-size: 30px;
+    padding-left: 20%;
+}   
+.stu-large p{
+    margin-left: 30%;
+    font-size: 30px;
+}
+.stuu-large{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;   
+}
+.stu-large .small{
+    font-size: 30px;
+    padding-left: 20%;
+}   
+.stu-large p{
+    margin-left: 30%;
+    font-size: 30px;
+}
+.stu-large{
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 3%;   
+}
+.stu-large .small{
+    font-size: 30px;
+    padding-left: 20%;
+}   
+.stuu-large p{
+    margin-left: 30%;
+    font-size: 30px;
 }
