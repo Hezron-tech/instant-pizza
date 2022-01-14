@@ -16,3 +16,20 @@
     padding: 30px;
     
 }
+.menu{
+    text-align: center;
+    margin-top: 2%;
+}
+.carousel-item{
+    height: 42rem;
+    background-color: #777;
+    color: white;
+    position: relative;
+}
+.con{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
