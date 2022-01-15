@@ -4,7 +4,7 @@
 }
 
 .navbar-nav{
-   font-size: 30px;
+   font-size: 25px;
    margin-left: 20%;
   text-align: center;
   
@@ -31,6 +31,23 @@
     right: 0;
     padding-bottom: 50px;
 }
+.pizza {
+    font-style: italic;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.crispy h2{
+    color: chocolate;
+    padding-bottom: 10px;
+}
+.glutten h2{
+    color: chocolate;
+    padding-bottom: 10px;  
+}
+.stuffed h2{
+     color: chocolate;
+    padding-bottom: 10px;
+}
 .price{
     display: flex;
     padding-top: 2%;
@@ -40,6 +57,7 @@
 .price .small{
     font-size: 30px;
     padding-left: 20%;
+    font-style: italic;
 }
 
 
@@ -54,6 +72,7 @@
 .glu-small .small{
     font-size: 30px;
     padding-left: 20%;
+    font-style: italic;
 }   
 .glu-small p{
     margin-left: 30%;
@@ -67,6 +86,7 @@
 .glu-medium .small{
     font-size: 30px;
     padding-left: 20%;
+    font-style: italic;
 }   
 .glu-medium p{
     margin-left: 30%;
@@ -77,50 +97,52 @@
     padding-top: 2%;
     padding-bottom: 3%;   
 }
+.glu-large{
+    display: flex;
+}
 .glu-large .small{
     font-size: 30px;
     padding-left: 20%;
+    font-style: italic;
 }   
 .glu-large p{
     margin-left: 30%;
     font-size: 25px;
 }
-.stu-large{
+
+.stu-small{
     display: flex;
-    padding-top: 2%;
-    padding-bottom: 3%;   
 }
-.glu-large .small{
+.stu-small .small{
     font-size: 30px;
     padding-left: 20%;
+    font-style: italic;
 }   
-.stu-large p{
+.stu-small p{
     margin-left: 30%;
-    font-size: 30px;
+    font-size: 25px;
 }
-.stuu-large{
+.stu-medium{
     display: flex;
-    padding-top: 2%;
-    padding-bottom: 3%;   
+}
+.stu-medium .small{
+    font-size: 30px;
+    padding-left: 20%;
+    font-style: italic;
+}   
+.stu-medium p{
+    margin-left: 30%;
+    font-size: 25px;
+}
+.stu-large{
+    display: flex;
 }
 .stu-large .small{
     font-size: 30px;
     padding-left: 20%;
+    font-style: italic;
 }   
 .stu-large p{
     margin-left: 30%;
-    font-size: 30px;
-}
-.stu-large{
-    display: flex;
-    padding-top: 2%;
-    padding-bottom: 3%;   
-}
-.stu-large .small{
-    font-size: 30px;
-    padding-left: 20%;
-}   
-.stuu-large p{
-    margin-left: 30%;
-    font-size: 30px;
+    font-size: 25px;
 }
