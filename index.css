@@ -151,3 +151,12 @@
     text-align: center;
     
 }
+.favourite-pizza{
+    background-color: darkgoldenrod;
+    margin-top: 3%;
+    color: white;
+   
+}
+.favourite-pizza p{
+    padding-top: 3%;
+}

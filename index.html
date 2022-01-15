@@ -170,51 +170,61 @@
 </div>
 </div>
 </div>
-
-<!-- start section for ordering -->
-
-<div class="container-fluid order" id="make-order">
-  <div class="order-overlay">
-    <div class="controls-top text-center" id="Order-now"> 
-      <h2>Order Here</h2>
+<!-- start -->
+<div class="container favourite-pizza">
+  <p style="text-align: center; font-size: 30px; color: white;">Order your favourite pizza here. </p> <br>
+  <form action="" id="order">
+     <label for="select" style="font-weight: bold; font-size: 20px;"> select your pizza:</label>
+      <select class="form-control form-control-sm" id="Flavour">
+        <br>
+        <option>select</option>
+        <option value="Chicken Flavour">Chicken flavour</option>
+        <option value="Hawaiian pizza">Hawaiian pizza</option>
+        <option value="Margherita Pizza">Margherita Pizza</option>
+      </select> <br>
+      <p style="font-size: 20px; font-weight: bold;">Choose the size of pizza you want:</p>
+      <select class="form-control form-control-sm" id="Size">
+        <br>
+        <option>select</option>
+        <option value="900">Large </option>
+        <option value="600"> Medium</option>
+        <option value="400">Small</option>
+      </select> <br>
+    <p style="font-size: 20px; font-weight: bold;">Choose what kind of crust:</p> 
+    <select class="form-control form-control-sm" id="Crust">
+      <option>select</option>
+      <option value="150">Thin crust @ Ksh.150</option>
+      <option value="200">Thick crust @Ksh.200</option>
+      <option value="250">Stuffed crust @Ksh.250</option>
+    </select> <br>
+  <p style="font-size: 20px; font-weight: bold;">Choose Pizza toppings:</p>
+    <select class="form-control form-control-sm" id="Topping">
+      <option>select</option>
+      <option value="150">Potato @ Ksh.150</option>
+      <option value="170">Mushrooms @Ksh.170</option>
+      <option value="200">Black olives @Ksh.200</option>
+    </select> 
+  </form>
+  ​
+  <form id="pricing">
+    <option value="one"></option>
+    <div class="form-group">
+          <label for=""  style="font-weight: bold; font-size: 20px;">Number of Pizza: </label>
+          <br>
+          <input type="number" class="form-control" id="number" placeholder="" required  min="1"/>
+        </div>
+        <br>
+        <button type="button" class="btn btn-success btn-primary" style="margin-left: 40%; width: 150px;" id="checkout">Order</button> <br>
+        
+      </form>
     </div>
-    <h2>Order your pizza here and we will deliver it to you at your door step!</h2>
-    <div class="row">
-        <div class="col-sm-5">
-          <form action="">
-              <label for="select">Select Your Flavor</label>
-              <select class="browser-default custom-select custom-select-md mb-3 name">
-                <!-- <option selected value="choose">Choose your flavor</option> -->
-                <option value="crispy Tikka">Crispy</option>
-                <option value="glutten Pizza">glutten</option>
-                <option value="stuffed Pizza">stuffed</option>
-                </select>
+    
 
-             <label for="select">Select Size</label>
-                <select class="browser-default custom-select custom-select-md mb-3" id="size">
-                  <option selected value="0">Select size here:</option>
-                  <option value="large">Large -- sh. 1200</option>
-                  <option value="medium">Medium -- sh. 850</option>
-                  <option value="small">Small -- sh. 600</option>
-                </select>
-
-                <label for="crust">Choose your favorite Crust!</label>
-                <select class="browser-default custom-select custom-select-md mb-3" id="crust">
-                    <option selected value="0">Select your preferred crust!</option>
-                  <option value="Crispy">Crispy -- sh. 200</option>
-                  <option value="Stuffed">Stuffed -- sh. 150</option>
-                  <option value="Gluten-free">Gluten-free-- sh. 180</option>
-                </select>
-                
-
-
-
-
-
-
-
-</div>
 <!-- end -->
 
+<div class="container table">
+
+  
+</div>
 </body>
 </html>
