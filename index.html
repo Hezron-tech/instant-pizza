@@ -262,20 +262,43 @@
   <button type="button" class="ctn btn-success btn-primary" style="margin-left: 40%; width: 150px; height: 50px; border-radius: 25px;"  id="place" onclick="myPizza()">Checkout</button> <br> <br>
  <div class="location">
   
+  <!-- location details -->
   <div class="checkout-info text-center " style="color: chocolate;">
     <h3 id="check">Check form</h3>
     <form action="" id="checkoutForm">
 <div class="form-group ">
 <input type="text" id="name" class="form-control mb-3" placeholder="Name">
-<label for="delivery">Desired Delivery Option:</label> <br>
+<label for="delivery" style="font-size: 20px;">Desired Delivery Option:</label> <br> <br>
 <select class="form-control" id="OptionDelivery" required>
 <option value="deliver">Home Delivery?</option>
 <option value="collect">Pick Up</option>
 </select>
+</div> <br>
+<button type="submit" class="btn btn-success" style="border-radius: 25px;" id="final-option">Deliver</button>
+</form>
 </div>
 
+<div class="deliveryLocation">
+  <form id="locationForm">
+  <h3 style="text-align: center;">Enter your location:</h3>
+  <div class="form-group">
+  <label>Estate</label>
+  <input type="text" class="form-control" id="estate" placeholder="Enter estate Name"
+      required />
+  </div>
+  <div class="form-group">
+  <label for="exampleFormControlSelect1">House Number:</label>
+  <input type="text" class="form-control" id="houseNumber" placeholder="Enter house Number"
+      required />
+  </div> <br> <br>
+  ​
+  <button type="submit" class="btn btn-success" id="submit"  >Submit</button>
+  </form>
+  ​
+  </div>
 </div>
-</div>
+<!-- end of location -->
+
 
 </div>
 <br>

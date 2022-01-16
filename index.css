@@ -177,3 +177,9 @@
     width: 500px;
     margin-left: 30%;
 }
+.checkout-info{
+    display: none;
+}
+#submit{
+    margin-left: 40%;
+}
