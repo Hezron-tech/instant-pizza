@@ -1,80 +1,84 @@
-var newOrder =[]
-function Pizza (pizzaFlavour,pizzaSize,pizzaCrust,pizzaToppings,pizzaNumber){
+var OrderNew = [];
+function Pizza(pizzaFlavour,pizzaSize,pizzaCrust,pizzaTopping, PizzaNumber) {
     this.pizzaFlavour=pizzaFlavour;
-    this.pizzaSize=pizzaSize;
+    this.pizzaSize= pizzaSize;
     this.pizzaCrust=pizzaCrust;
-    this.pizzaToppings=pizzaToppings;
+    this.pizzaTopping=pizzaTopping;
+    this.PizzaNumber=PizzaNumber;
 }
-var pizzaPrices=[1200,1000,800]
-Pizza.prototype.totalPrice= function(){
-    return(this.pizzaCrust + this.pizzaSize + this.pizzaToppings)* this.pizzaNumber
+var pizzaPrice= [900,600,400,]
+Pizza.prototype.totalPrice = function(){
+    return (this.pizzaCrust + this.pizzaTopping + this.pizzaSize) * this.PizzaNumber
 };
-Pizza.prototype.pizzaS=function(){
-    if(this.pizzaSize==1200){a
-        return "large"
-    }
-    else if(this.pizzaSize==1000){
-        return "medium"
-    }
-    else if(this.pizzaSize==800){
-        return "small"
-    }
-}
-Pizza.prototype.pizzaC=function(){
-    if(this.pizzaCrust==150){
-        return "thin"
-    }
-    else if(this.pizzaCrust==200){
-        return "thick"
-    }
-    else if(this.pizzaCrust==250){
-        return "stuffed"
+Pizza.prototype.pizzaS = function () {
+    if (this.pizzaSize == 900) {
+        return "Large"
+        
+    } else if (this.pizzaSize == 600) {
+        return "Medium"
+    } else if (this.pizzaSize == 400) {
+        return "Small"
     }
 }
-Pizza.prototype.pizzaT=function(){
-    if(this.pizzaToppings==150){
-        return "potato"
+Pizza.prototype.pizzaC = function () {
+    if (this.pizzaCrust == 150) {
+        return "Thin"
+        
+    } else if (this.pizzaCrust == 200) {
+        return "Thick"
+    } else if (this.pizzaCrust == 250) {
+        return "Stuffed"
     }
-    else if(this.pizzaToppings==170){
-        return "mushrooms"
+}
+Pizza.prototype.pizzaT =function(){
+    if (this.pizzaTopping == 150){
+        return "Potato"
     }
-    else if(this.pizzaToppings==200){
-        return "Black olives"
+    else if (this.pizzaTopping == 170){
+        return "Mushrooms"
+    }
+    else if ( this.pizzaTopping == 200){
+        return"Black olives"
     }
 }
 
-$("#checkout").click(function (event){
+$("#checkout").click(function (event) {
+    
     var PizzaFlavour = $("#Flavour").val();
     
     var PizzaSize = parseInt( $("#Size").val());
     
     var PizzaCrust = parseInt( $("#Crust").val());
     
-    var PizzaToppings =parseInt( $("#Topping").val());
+    var PizzaTopping =parseInt( $("#Topping").val());
     
     var PizzaNumber =parseInt( $("#number").val());
-
-    newPizzae= new Pizza(pizzaFlavour,pizzaSize,PizzaCrust,pizzaToppings,PizzaNumber);
-
+    
+    
+    var newPizzae = new Pizza(PizzaFlavour, PizzaSize, PizzaCrust, PizzaTopping, PizzaNumber); 
+    
+    
     console.log(newPizzae)
-    console.log(newPizzae.PizzaFlavour)
+    
+    console.log(newPizzae.pizzaFlavour)
     OrderNew.push(newPizzae);
     console.log(OrderNew)
-
+    
     $("#Flavour").val("");
     $("#Size").val("");
     $("#Crust").val("");
     $("#Topping").val("");
     $("#number").val("");
      
-    totalAmount=0
+    totalAmount = 0
     for (let i = 0; i < OrderNew.length; i++ ){
         totalAmount += OrderNew[i].totalPrice();
         console.log(totalAmount)
     }
+    
     $("#ordersTaken").append(
         "<tr>" +
-        '<td scope="table">' +
+        '<td scope="orderCalculation">' +
        newPizzae.pizzaFlavour +
         "</td>" +
         "<td>" +
@@ -99,62 +103,58 @@ $("#checkout").click(function (event){
         newPizzae.totalPrice() +
         "</td>" +
         "</tr>"
-);
-$("#ordersTaken").append("");
+
+    );
+    
+    $("#ordersTaken").append("");
     if (OrderNew.length > 0) {
         $("#form-heading").empty();
-        $("#form-heading").append("Make A New Order")
-    };
-        $("#totalAmount").fadeIn();
-        $("#Checkout").fadeIn();
-        $("#orderPut").fadeIn();
-        $("#totalAmount").empty();
-        $("#totalAmount").append(totalAmount);
-        $("#totalAmount").show();
-    });  
-    $("#checkout").click(function () {
-
-
-
-        $(".checkout-info").show();
-        });
-        $("#checkoutForm").submit(function (event) {
-        event.preventDefault();
-        var name = $("#name").val();
-        var deliveryOption = $("#OptionDelivery").val();
-        NameOfCustomer = name;
-        $("#name").val("");
-        $("#OptionDelivery").val("");
-        $(".checkout-info").hide();
-        $("#Checkout").hide();
-        $("#totalAmount").empty();
-        if (deliveryOption === "deliver") {
-            $(".deliveryLocation").show();
-            $(".deliveryCost").show();
-            $("#totalAmount").empty();
-            $("#delivery-cost").append(150);
-            totalAmount += 150;
-            $("#totalAmount").empty();
-            $("#totalAmount").empty();
-        $("#totalAmount").append(totalAmount);
-        $(".TotalAmount").show();
-        } else {
-            alert(+"Dear, "+ NameOfCustomer + ": Your total bill is Ksh. " + totalAmount + ".Collect your order in the next one hour." + " " + " Feel free to reach out to us anytime for questions peraining our products.");
-        }
-        });
-        $("#locationForm").submit(function (event) {
-        event.preventDefault();
-        var estateEntered = $("#estate").val();
-        var houseNumberEntered = $("#houseNumber").val();
-        estate = estateEntered;
-        houseNumber = houseNumberEntered;
-        $("#Checkout").hide();
-        $(".deliveryLocation").hide();
-        $("#totalAmount").empty();
-        $("#totalAmount").append(totalAmount);
-        $(".TotalAmount").show();
-        alert(+ "Dear " + NameOfCustomer + ": Your new total bill is Ksh. " + totalAmount + ". Your order will be delivered to " + estate + ", " + houseNumber + " in the next one hour." + " Make full payment on delivery." + "Feel free to reach out to us anytime for questions peraining our products and deliveries.");
-        });
-    
-
-        
+        $("#form-heading").append("Make A New Order");
+    }
+    $("#totalAmount").fadeIn();
+    $("#Checkout").fadeIn();
+    $("#orderPut").fadeIn();
+    $("#totalAmount").empty();
+    $("#totalAmount").append(totalAmount);
+    $("#totalAmount").show();
+});
+$("#Checkout").click(function () {
+$(".checkout-info").show();
+});
+$("#checkoutForm").submit(function (event) {
+event.preventDefault();
+var name = $("#name").val();
+var deliveryOption = $("#OptionDelivery").val();
+NameOfCustomer = name;
+$("#name").val("");
+$("#OptionDelivery").val("");
+$(".checkout-info").hide();
+$("#Checkout").hide();
+$("#totalAmount").empty();
+if (deliveryOption === "deliver") {
+    $(".deliveryLocation").show();
+    $(".deliveryCost").show();
+    $("#totalAmount").empty();
+    $("#delivery-cost").append(150);
+    totalAmount += 150;
+    $("#totalAmount").empty();
+    $("#totalAmount").empty();
+$("#totalAmount").append(totalAmount);
+$(".TotalAmount").show();
+} else {
+    alert(+"Dear, "+ NameOfCustomer + ": Your total bill is Ksh. " + totalAmount + ".Collect your order in the next one hour." + " " + " Feel free to reach out to us anytime for questions peraining our products.");
+}
+});
+$("#locationForm").submit(function (event) {
+event.preventDefault();
+var estateEntered = $("#estate").val();
+var houseNumberEntered = $("#houseNumber").val();
+estate = estateEntered;
+houseNumber = houseNumberEntered;
+$("#Checkout").hide();
+$(".deliveryLocation").hide();
+$("#totalAmount").empty();
+$("#totalAmount").append(totalAmount);
+$(".TotalAmount").show();
+alert(+ "Dear " + NameOfCustomer + ": Your new total bill is Ksh. " + totalAmount + ". Your order will be delivered to " + estate + ", " + houseNumber + " in the next one hour." + " Make full payment on delivery." + "Feel free to reach out to us anytime for questions peraining our products and deliveries.");
+});

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSTANT-PIZZA</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -176,134 +177,130 @@
 </div>
 </div>
 <!-- start -->
-<div class="container favourite-pizza">
-  <p style="text-align: center; font-size: 30px; color: white;">Order your favourite pizza here. </p> <br>
+
+
+<div class="container hey">
   <form action="" id="order">
-     <label for="select" style="font-weight: bold; font-size: 20px;"> select your pizza:</label>
+      <h2 style="text-align: center;color: black;"><strong> Order Now</strong></h2>
+  <div class="card" style="color;">
+      <p>Choose the Pizza Flavour you want</p>
       <select class="form-control form-control-sm" id="Flavour">
         <br>
         <option>select</option>
         <option value="Chicken Flavour">Chicken flavour</option>
         <option value="Hawaiian pizza">Hawaiian pizza</option>
         <option value="Margherita Pizza">Margherita Pizza</option>
-      </select> <br>
-      <p style="font-size: 20px; font-weight: bold;">Choose the size of pizza you want:</p>
+      </select>
+      <p>Choose the size of pizza you want</p>
       <select class="form-control form-control-sm" id="Size">
         <br>
         <option>select</option>
         <option value="900">Large </option>
         <option value="600"> Medium</option>
         <option value="400">Small</option>
-      </select> <br>
-    <p style="font-size: 20px; font-weight: bold;">Choose what kind of crust:</p> 
+      </select>
+    <p>Choose what kind of crust</p>  <br>
     <select class="form-control form-control-sm" id="Crust">
       <option>select</option>
       <option value="150">Thin crust @ Ksh.150</option>
       <option value="200">Thick crust @Ksh.200</option>
       <option value="250">Stuffed crust @Ksh.250</option>
-    </select> <br>
-  <p style="font-size: 20px; font-weight: bold;">Choose Pizza toppings:</p>
+    </select>
+  <p>Choose Pizza toppings</p>
     <select class="form-control form-control-sm" id="Topping">
       <option>select</option>
       <option value="150">Potato @ Ksh.150</option>
       <option value="170">Mushrooms @Ksh.170</option>
       <option value="200">Black olives @Ksh.200</option>
-    </select> 
-  </form>
+    </select>
+    
+  </div>
+  ​
+  </form> <br>
   ​
   <form id="pricing">
     <option value="one"></option>
     <div class="form-group">
-          <label for=""  style="font-weight: bold; font-size: 20px;">Number of Pizza: </label>
+          <label for="" >Number of Pizza </label>
           <br>
           <input type="number" class="form-control" id="number" placeholder="" required  min="1"/>
         </div>
-        <br>
-        <button type="button" class="btn btn-success btn-primary" style="margin-left: 40%; width: 150px;" id="checkout" onclick="myPizza()">Order</button> <br>
+        <button type="button" class="btn btn-success btn-lg" style="margin-left: 40%;" id="checkout">Order</button>
         
       </form>
-      <br>
-      <br>
-    </div>
-    
-
-<!-- end -->
-
-<div class="container">
-  <div class="total">
-    <h1>Your Order is:</h1>
+      </div>
+  ​
+  ​
+  ​
+  <br><br>
+  <div class="container" id="contain">
+  <div class="col-sm-7" id="orderPut">
+                 
+    <div class="orderCalculation">
+      <h2>Your Order is:</h2>
+      <div id="your-orders">
+        <table class="table table-sm  pizzaTable">
+          <thead>
+            <tr>
+              <th scope="col">Flavour</th>
+              <th scope="col">Size</th>
+              <th scope="col">Crust</th>
+              <th scope="col">Topping</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTaken">
+            
+          </tbody>
+        </table>
+        <p class="deliveryCost hidden">
+          Delivery Cost: Ksh. <span id="delivery-cost"></span>
+      </p>
+      <p class="TotalAmount hidden">
+          Total Amount: Ksh. <span id="totalAmount"></span>
+      </p>
+      <br /><br />
+        <button class="btn btn-success" id="Checkout" onclick="myPizza()">Checkout</button>
+        <div class="checkout-info hidden">
+          <h3 id="check">Check form</h3>
+          <form action="" id="checkoutForm">
+  <div class="form-group">
+  <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+  <label for="delivery">Desired Delivery Option</label>
+  <select class="form-control" id="OptionDelivery" required>
+  <option value="deliver">Home Delivery?</option>
+  <option value="collect">Pick Up</option>
+  </select>
   </div>
-   <div id="your-orders">
-      <table class="table table-sm  pizzaTable">
-        <thead>
-          <tr>
-            <th scope="col">Flavour</th>
-            <th scope="col">Size</th>
-            <th scope="col">Crust</th>
-            <th scope="col">Topping</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Total</th>
-          </tr>
-        </thead>
-    <tbody id="ordersTaken">
-     
-        
-       
-      
-        
-    </tbody>
-  </table> 
-  <p class="deliveryCost hidden">
-    Delivery Cost: Ksh. <span id="delivery-cost"></span>
-</p>
-<p class="TotalAmount hidden">
-    Total Amount: Ksh. <span id="totalAmount"></span>
-</p> <br>
-  <button type="button" class="ctn btn-success btn-primary" style="margin-left: 40%; width: 150px; height: 50px; border-radius: 25px;"  id="place" onclick="myPizza()">Checkout</button> <br> <br>
- <div class="location">
-  
-  <!-- location details -->
-  <div class="checkout-info text-center " style="color: chocolate;">
-    <h3 id="check">Check form</h3>
-    <form action="" id="checkoutForm">
-<div class="form-group ">
-<input type="text" id="name" class="form-control mb-3" placeholder="Name">
-<label for="delivery" style="font-size: 20px;">Desired Delivery Option:</label> <br> <br>
-<select class="form-control" id="OptionDelivery" required>
-<option value="deliver">Home Delivery?</option>
-<option value="collect">Pick Up</option>
-</select>
-</div> <br>
-<button type="submit" class="btn btn-success" style="border-radius: 25px;" id="final-option">Deliver</button>
-</form>
-</div>
-
-<div class="deliveryLocation">
+  <button type="submit" class="btn btn-success" id="final-option">Deliver</button>
+  </form>
+  </div>
+  <div class="deliveryLocation hidden">
   <form id="locationForm">
-  <h3 style="text-align: center;">Enter your location:</h3>
+  <h3>Enter your location</h3>
   <div class="form-group">
   <label>Estate</label>
-  <input type="text" class="form-control" id="estate" placeholder="Enter estate Name"
+  <input type="text" class="form-control" id="estate" placeholder="Enter Your Name"
       required />
   </div>
   <div class="form-group">
-  <label for="exampleFormControlSelect1">House Number:</label>
-  <input type="text" class="form-control" id="houseNumber" placeholder="Enter house Number"
+  <label for="exampleFormControlSelect1">House Number</label>
+  <input type="text" class="form-control" id="houseNumber" placeholder="Enter Your Name"
       required />
-  </div> <br> <br>
+  </div>
   ​
-  <button type="submit" class="btn btn-success" id="submit"  >Submit</button>
+  <button type="submit" class="btn btn-success" id="submit" >Submit</button>
   </form>
   ​
   </div>
-</div>
-<!-- end of location -->
-
-</div>
-</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  ​<br>
 <br>
-<br>
-  <div class="contact" style="text-align: center; background-color: grey; color: white;">
+  <div class="contact" style="text-align: center; background-color: grey; color: black;">
     ​<h1>Contact Us;</h1>
     ​<p>You can reach us through our Email address : kiprophez@gmail.com, Twitter @hezron-kiprop</p>
     <p style="font-style: italic;">We Value your feedback!</p>
@@ -312,7 +309,7 @@
       
         <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" 
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        
 <script src="script.js"></script>
 </body>
 </html>
