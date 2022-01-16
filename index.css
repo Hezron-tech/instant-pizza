@@ -183,3 +183,6 @@
 #submit{
     margin-left: 40%;
 }
+.deliveryLocation{
+    display: none;
+}
