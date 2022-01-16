@@ -105,7 +105,7 @@
 </div>
 </div>
 <!-- end -->
-<!-- start of glutten pizza section -->
+
 
 <div class="glutten">
     <h2>margherita pizza</h2>
@@ -259,14 +259,27 @@
 <p class="TotalAmount hidden">
     Total Amount: Ksh. <span id="totalAmount"></span>
 </p> <br>
-  <button type="button" class="ctn btn-success btn-primary" style="margin-left: 40%; width: 150px; height: 50px; border-radius: 25px;" id="place">Checkout</button>
+  <button type="button" class="ctn btn-success btn-primary" style="margin-left: 40%; width: 150px; height: 50px; border-radius: 25px;"  id="place" onclick="myPizza()">Checkout</button> <br> <br>
  <div class="location">
   
- <br> 
- <br>
+  <div class="checkout-info text-center " style="color: chocolate;">
+    <h3 id="check">Check form</h3>
+    <form action="" id="checkoutForm">
+<div class="form-group ">
+<input type="text" id="name" class="form-control mb-3" placeholder="Name">
+<label for="delivery">Desired Delivery Option:</label> <br>
+<select class="form-control" id="OptionDelivery" required>
+<option value="deliver">Home Delivery?</option>
+<option value="collect">Pick Up</option>
+</select>
+</div>
 
 </div>
 </div>
+
+</div>
+<br>
+<br>
   <div class="contact" style="text-align: center; background-color: grey; color: white;">
     ​<h1>Contact Us;</h1>
     ​<p>You can reach us through our Email address : kiprophez@gmail.com, Twitter @hezron-kiprop</p>
